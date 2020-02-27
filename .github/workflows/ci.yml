@@ -1,0 +1,96 @@
+name: CI
+
+on: [push]
+
+env:
+  NODE_VERISON: 12.14
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+
+    if: "! contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+      - name: Display commit message
+        run: echo "${{ github.event.head_commit.message }}"
+
+  build:
+    needs: prepare
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-verison: [8.x, 10.x, 12.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Nodejs v${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install
+        run: npm install
+
+      - name: Test
+        run: npm run test
+
+      - name: Audit
+        run: npm audit
+
+      - name: Build
+        run: npm run build
+
+  coverage:
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Nodejs v${{ env.NODE_VERISON }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERISON }}
+
+      - name: Install
+        run: npm install
+
+      - name: Generate coverage report
+        run: npm run test:coverage
+
+      - name: Upload coverage report
+        uses: codecov/codecov-action@v1.0.5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+  release:
+    needs: build
+
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Nodejs v${{ env.NODE_VERISON }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERISON }}
+
+      - name: Install
+        run: npm install
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
