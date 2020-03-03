@@ -12,7 +12,7 @@ would like you to follow:
 
 ## Code of Conduct
 
-Help us keep OSRS Logs open and inclusive. Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+Help us keep **OSRS Exchange** open and inclusive. Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Got a question or problem?
 
