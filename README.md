@@ -222,8 +222,20 @@ exchange
 
 ```js
 [
-  { id: 1234, name: '', description: '', members: false, icon: '' },
-  { id: 1234, name: '', description: '', members: false, icon: '' },
+  {
+    id: 10392,
+    name: 'A powdered wig',
+    description: 'A big do about nothing.',
+    members: true,
+    icon: 'http://services.runescape.com/m=itemdb_oldschool/1583157682291_obj_big.gif?id=10392'
+  },
+  {
+    id: 13263,
+    name: 'Abyssal bludgeon',
+    description: 'Elements of deceased Abyssal Sires have been fused together.',
+    members: true,
+    icon: 'http://services.runescape.com/m=itemdb_oldschool/1583157682291_obj_big.gif?id=13263'
+  },
   ...
 ]
 ```
