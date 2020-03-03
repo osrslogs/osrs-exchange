@@ -1,1 +1,3 @@
-console.info('hello world');
+import Exchange from './exchange';
+
+export default Exchange;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseItemPriceGraph it changes the keys correctly 1`] = `
+Object {
+  "average": Object {
+    "2019-09-05T00:00:00.000Z": 2528557,
+    "2019-09-06T00:00:00.000Z": 2527956,
+  },
+  "daily": Object {
+    "2019-09-05T00:00:00.000Z": 2490649,
+    "2019-09-06T00:00:00.000Z": 2492999,
+  },
+}
+`;

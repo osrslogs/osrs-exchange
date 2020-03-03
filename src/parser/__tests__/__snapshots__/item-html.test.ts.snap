@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseItemHtml it returns Item when given a valid page 1`] = `
+Object {
+  "description": "A weapon from the abyss.",
+  "icon": "http://services.runescape.com/m=itemdb_oldschool/1583157682291_obj_big.gif?id=4151",
+  "id": 4151,
+  "members": true,
+  "name": "Abyssal whip",
+  "price": Object {
+    "change": Object {
+      "day180": -5981,
+      "day30": -5981,
+      "day90": -5981,
+      "today": -5981,
+    },
+    "current": 2388108,
+  },
+}
+`;
