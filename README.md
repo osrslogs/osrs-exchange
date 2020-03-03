@@ -131,7 +131,7 @@ Same response as [getItemById](####response).
 
 Returns the daily and average price history of an item. The entires are represented by [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) keys with the related price as the value.
 
-Note: This method can not be used from a browser due to `Cross-Origin Resource Sharing` being disabled on the Old School RuneScape hiscores API.
+Note: This method can not be used from a browser due to `Cross-Origin Resource Sharing` being disabled on the Old School RuneScape exchange API.
 
 | Parameter | Required | Note                 |
 | --------- | -------- | -------------------- |
@@ -171,7 +171,7 @@ exchange
 
 Returns the daily and average price history of an item. The entires are represented by [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) keys with the related price as the value.
 
-Note: This method can not be used from a browser due to `Cross-Origin Resource Sharing` being disabled on the Old School RuneScape hiscores API.
+Note: This method can not be used from a browser due to `Cross-Origin Resource Sharing` being disabled on the Old School RuneScape exchange API.
 
 | Parameter | Required | Note                                                       |
 | --------- | -------- | ---------------------------------------------------------- |
@@ -198,7 +198,7 @@ Same response as [getPriceHistoryById](####response-1).
 
 Fetches up to 12 items that start with `alpha` character on the given page.
 
-Note: This method can not be used from a browser due to `Cross-Origin Resource Sharing` being disabled on the Old School RuneScape hiscores API.
+Note: This method can not be used from a browser due to `Cross-Origin Resource Sharing` being disabled on the Old School RuneScape exchange API.
 
 | Parameter | Required | Note                                              |
 | --------- | -------- | ------------------------------------------------- |
