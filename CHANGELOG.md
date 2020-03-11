@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/osrslogs/osrs-exchange/compare/v1.0.0...v1.0.1) (2020-03-11)
+
+
+### Bug Fixes
+
+* make request timeout throw service unavailable error ([fa88709](https://github.com/osrslogs/osrs-exchange/commit/fa88709a16c35da856038bafe60206add0028f49))
+
 # 1.0.0 (2020-03-03)
 
 
