@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { NotFoundError, HttpError } from './util/error';
+import { NotFoundError, HttpError, ServiceUnavailableError } from './util/error';
 import { Config } from './types';
 
 /**
@@ -38,12 +38,10 @@ const request = async (url: string, config: Config): Promise<unknown> => {
     const res = await axios.get(url, axiosConfig);
     return res.data;
   } catch (err) {
-    /*
-    TOOD: Verify response code / redirects when exchange is unavailable
-    if (err.response.status === 303) {
+    // TOOD: Verify response code / redirects when exchange is unavailable || err.response.status === 303
+    if (err.code === 'ECONNABORTED') {
       throw new ServiceUnavailableError('Exchange is unavailable');
     }
-    */
     if (err.response.status === 404) {
       throw new NotFoundError('Exchange did not find item');
     }
