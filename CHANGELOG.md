@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/osrslogs/osrs-exchange/compare/v1.0.1...v1.0.2) (2020-03-14)
+
+
+### Bug Fixes
+
+* update packages to fix vulnerabilities ([17768a6](https://github.com/osrslogs/osrs-exchange/commit/17768a69d1f717b976a133e0c55a4b367b2213cc))
+
 ## [1.0.1](https://github.com/osrslogs/osrs-exchange/compare/v1.0.0...v1.0.1) (2020-03-11)
 
 
