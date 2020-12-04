@@ -1,6 +1,6 @@
 {
   "name": "osrs-exchange",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "description": "A Promise based Old School RuneScape grand exchange API",
   "homepage": "https://osrslogs.com",

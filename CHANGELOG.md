@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/osrslogs/osrs-exchange/compare/v1.0.2...v1.0.3) (2020-12-04)
+
+
+### Bug Fixes
+
+* change user-agent ([#9](https://github.com/osrslogs/osrs-exchange/issues/9)) ([c5ae1d0](https://github.com/osrslogs/osrs-exchange/commit/c5ae1d0630abb3ecb24cfff202e12b7b1ec16b34))
+
 ## [1.0.2](https://github.com/osrslogs/osrs-exchange/compare/v1.0.1...v1.0.2) (2020-03-14)
 
 
