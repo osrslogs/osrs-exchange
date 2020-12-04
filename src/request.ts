@@ -11,7 +11,9 @@ import { Config } from './types';
  */
 const buildAxiosConfig = (config: Config): AxiosRequestConfig => ({
   headers: {
-    'user-agent': config.userAgent ? config.userAgent : 'axios',
+    'user-agent': config.userAgent
+      ? config.userAgent
+      : 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
     accept: 'text/html',
     'accept-encoding': 'gzip',
   },

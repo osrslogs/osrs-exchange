@@ -8,9 +8,7 @@ import parseItemPriceGraph from './parser/item-graph';
 import parseItemPage from './parser/item-page';
 
 class Exchange {
-  readonly config: Config = {
-    userAgent: 'osrs-exchange',
-  };
+  readonly config: Config = {};
 
   constructor(config?: Config) {
     this.config = { ...this.config, ...config };
