@@ -13,18 +13,6 @@ const itemId = 4151;
 const itemName: ItemName = 'abyssal whip';
 
 describe('constructor', () => {
-  const defaultUserAgent = 'osrs-exchange';
-
-  it('creates an object with UA config', () => {
-    const expected = {
-      userAgent: 'hello world',
-    };
-
-    const result: Exchange = new Exchange(expected);
-
-    expect(result.config).toEqual(expected);
-  });
-
   it('creates an object with timeout config', () => {
     const expected = {
       timeout: 123,
@@ -33,7 +21,6 @@ describe('constructor', () => {
     const result: Exchange = new Exchange(expected);
 
     expect(result.config.timeout).toEqual(expected.timeout);
-    expect(result.config.userAgent).toEqual(defaultUserAgent);
   });
 
   it('creates an object with proxy config', () => {
@@ -47,17 +34,6 @@ describe('constructor', () => {
     const result: Exchange = new Exchange(expected);
 
     expect(result.config.proxy).toEqual(expected.proxy);
-    expect(result.config.userAgent).toEqual(defaultUserAgent);
-  });
-
-  it('creates an object without config', () => {
-    const expected = {
-      userAgent: defaultUserAgent,
-    };
-
-    const result: Exchange = new Exchange();
-
-    expect(result.config).toEqual(expected);
   });
 });
 
